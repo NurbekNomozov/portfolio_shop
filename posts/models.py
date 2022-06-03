@@ -37,6 +37,11 @@ class PostModel(models.Model):
     tags = models.ManyToManyField(PostTagModel, related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def get_prev(self):
+        return self.get_previous_by_created_at()
+
+    def get_next(self):
+        return self.get_next_by_created_at()
 
     def __str__(self):
         return self.title

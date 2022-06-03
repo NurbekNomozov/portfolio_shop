@@ -108,3 +108,5 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
     },
 }
+
+# token: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
